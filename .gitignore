@@ -1,0 +1,11 @@
+# 忽略所有由 IntelliJ IDEA 生成的配置文件
+.idea/
+*.iml
+
+# 忽略编译输出文件夹 (根据你的设置可能是 out 或 target)
+out/
+target/
+
+# 忽略其他系统或IDE生成的文件
+.DS_Store
+*.log
