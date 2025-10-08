@@ -30,6 +30,8 @@ public class daysInMonth {
         while(true){
             if(year<=0||init>6||init<0){
                 System.out.println("你的输入不正确！请重新输入：");
+                year=scanner.nextInt();
+                init=scanner.nextInt();
             }
             else{
                 daysInMonth daysInMonth=new daysInMonth(init);
@@ -37,7 +39,7 @@ public class daysInMonth {
                     daysInMonth.isLeapyear();
                 }
                 ArrayList<Integer> result=daysInMonth.calculator(init);
-                System.out.println(result);
+                System.out.println("每个月的首日星期为"+result);
                 break;
             }
         }
