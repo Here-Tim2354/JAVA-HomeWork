@@ -9,3 +9,44 @@ target/
 # 忽略其他系统或IDE生成的文件
 .DS_Store
 *.log
+/JAVA Course/JAVA Practice/Experiment 1/3.zip
+/JAVA Course/JAVA Practice/Experiment 1/4.zip
+/JAVA Course/JAVA Practice/Experiment 1/5.zip
+/JAVA Course/JAVA Practice/Practice 1/5.zip
+/JAVA Course/JAVA Practice/Title/01.作业/0101-摄氏温度值度转换成华氏温度值.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0101-正整数的各位数字之和.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0102-三角形的面积.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0102-圆柱体的体积.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0103-正整数10进制形式转换16进制形式.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0103-计算每个月第一天是星期几.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0104-判断回文整数.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0104-计算自然常数e的值.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0105-储物柜问题.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0105-考试成绩分析.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0201-矩形类的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0201-股票类的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0202-为矩形类定义构造方法.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0202-风扇类的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0203-定义类和创建对象求解一元二次方程的根.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0203-计算整数算术四则运算表达式的值.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0204-判断二维坐标系中2个圆的位置关系.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0204-计时器类的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0301-初步了解继承.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0301-正n多边形类的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0302-初步了解方法覆盖.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0302-银行账户类的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0303-初步使用抽象类.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0401-Colorable接口的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0401-计算不同形状的零件面积之和.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0402-Lambda表达式应用.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0402-简易产品管理程序.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0501-应用泛型查找二维数组最大最小值.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0501-泛型方法的定义与使用.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0502-泛型类的定义和使用.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0601-找出二维坐标系中距离最近和最远的点.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0601-整数加法练习程序.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0701-显示目录或文件的属性.pdf
+/JAVA Course/JAVA Practice/Title/01.作业/0701-简易地址簿管理程序.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0702-统计Java源程序文件中关键字的使用次数.pdf
+/JAVA Course/JAVA Practice/Title/02.实验/0801-综合性实验_Java源程序分析程序.pdf
+/JAVA Course/JAVA Practice/Experiment 1/4/eCalculator.class
