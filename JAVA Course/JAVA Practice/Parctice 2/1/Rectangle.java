@@ -8,7 +8,7 @@ public class Rectangle {
         this.height=height;
     }
 
-    public double getPerimeter(){c
+    public double getPerimeter(){
         return (width+height)*2;
     }
     public double getArea(){
