@@ -11,6 +11,10 @@
       <sourceFolder url="file://$MODULE_DIR$/JAVA Course/Experiment/Experiment 1/4" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JAVA Course/Experiment/Experiment 1/5" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JAVA Course/JAVA Practice/Partice 2/1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JAVA Course" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JAVA Course/JAVA Practice/Parctice 2/1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JAVA Course/JAVA Practice/Parctice 2/2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JAVA_Course" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
     </content>
     <orderEntry type="inheritedJdk" />
