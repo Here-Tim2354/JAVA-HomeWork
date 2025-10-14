@@ -1,7 +1,6 @@
 package Experiment.Experiment1.task2;
 
 import java.util.InputMismatchException;
-import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -40,7 +39,7 @@ public class Triangle {
 
     public static void main(String[] args) {
         // 使用 try-with-resources 确保 Scanner 自动关闭
-        try (Scanner scanner = new Scanner(System.in).useLocale(Locale.US)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("请输入三角形三个顶点的坐标 (格式: x1 y1 x2 y2 x3 y3):");
 
             // 读取坐标并创建 Point 实例
@@ -53,7 +52,7 @@ public class Triangle {
             double area = triangle.getArea();
 
             // 格式化输出结果
-            System.out.printf(Locale.US, "三角形的面积是: %.2f%n", area);
+            System.out.printf("三角形的面积是: %.2f%n", area);
 
         } catch (InputMismatchException e) {
             System.err.println("输入错误：请输入6个有效的数字。");
