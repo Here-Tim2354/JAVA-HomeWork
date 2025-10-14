@@ -16,6 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/JAVA Course/JAVA Practice/Parctice 2/2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/JAVA_Course" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/JAVA_Course/Title" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
