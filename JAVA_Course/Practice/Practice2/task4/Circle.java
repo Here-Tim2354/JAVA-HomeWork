@@ -1,6 +1,5 @@
 package Practice.Practice2.task4;
 
-import javax.swing.*;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
