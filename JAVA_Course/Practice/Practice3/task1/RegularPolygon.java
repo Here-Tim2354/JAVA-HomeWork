@@ -1,4 +1,4 @@
-package Practice.Practice3;
+package Practice.Practice3.task1;
 
 import java.util.Objects;
 
@@ -85,4 +85,6 @@ public class RegularPolygon {
     public int hashCode() {
         return Objects.hash(numberOfSides, lengthOfSide, x, y);
     }
+
+
 }
