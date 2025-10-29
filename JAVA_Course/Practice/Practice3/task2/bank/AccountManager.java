@@ -71,6 +71,4 @@ public class AccountManager {
         }
         return count;
     }
-
-
 }
