@@ -10,6 +10,10 @@ public class ProductInventory {
         this.productList = new ArrayList<>();
     }
 
+    public List<Product> getProductList() {
+        return productList;
+    }
+
     public Product getProduct(String id){
         for(Product productCheck:productList){
             if(productCheck.getId().equals(id)){
@@ -30,11 +34,24 @@ public class ProductInventory {
         return false;
     }
 
+    public int getTotalQuantity(){
+        int sum=0;
+        for(Product productCheck:productList){
+            sum+=productCheck.getQuantity();
+        }
+        return sum;
+    }
+
     public double getTotalAmount(){
         double sum=0;
         for(Product productCheck:productList){
             sum+=productCheck.getPrice()*productCheck.getQuantity();
         }
         return sum;
+    }
+
+    public void printQuantityAndAmount(){
+        System.out.println("合计数量："+this.getTotalQuantity()+
+                ", 合计金额："+this.getTotalAmount());
     }
 }

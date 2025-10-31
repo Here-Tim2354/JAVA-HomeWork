@@ -49,6 +49,26 @@ public class Product {
         return launchDate;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setLaunchDate(LocalDate launchDate) {
+        this.launchDate = launchDate;
+    }
+
     public static Comparator<Product> byID(){
         return Comparator.comparing(Product::getId);
     }
