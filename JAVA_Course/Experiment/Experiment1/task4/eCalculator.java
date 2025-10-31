@@ -1,5 +1,8 @@
+package Experiment.Experiment1.task4;
+
 import java.util.Scanner;
 import java.lang.Math;
+
 public class eCalculator {
     private final int number;
     private double result;

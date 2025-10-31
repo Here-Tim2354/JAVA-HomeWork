@@ -1,3 +1,5 @@
+package Experiment.Experiment1.task3;
+
 import java.util.Scanner;
 
 public class Decimal2Hexadecimal {

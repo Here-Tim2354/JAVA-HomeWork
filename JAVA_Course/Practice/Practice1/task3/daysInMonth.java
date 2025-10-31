@@ -1,3 +1,5 @@
+package Practice.Practice1.task3;
+
 import java.util.Scanner;
 import java.util.ArrayList;
 

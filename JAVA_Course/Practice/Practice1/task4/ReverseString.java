@@ -1,3 +1,5 @@
+package Practice.Practice1.task4;
+
 import java.util.Scanner;
 
 public class ReverseString {
