@@ -26,7 +26,7 @@ public class StopWatch {
         stopWatch.start();
 
         // 模拟一些任务
-        for (int i = 0; i < 100000000; i++) {
+        for (int i = 0; i < 1000000000; i++) {
             Math.sqrt(i);
         }
 

@@ -64,6 +64,24 @@ public class Location<T extends Comparable<T>> {
         if(matrix==null||matrix.length==0||matrix[0].length==0){
             return null;
         }
-
+        int minRow = 0;
+        int minCol = 0;
+        E minValue = matrix[0][0];
+        for(int i=0;i<matrix.length;i++){
+            for(int j=0;j<matrix[i].length;j++){
+                if(matrix[i][j].compareTo(minValue)<0){
+                    minValue=matrix[i][j];
+                    minRow=i;
+                    minCol=j;
+                }
+            }
+        }
+        return new Location<E>(minRow,minCol,minValue);
     }
+
+    public boolean isEmpty(){
+        return this.value==null;
+    }
+
+
 }
