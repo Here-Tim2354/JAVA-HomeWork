@@ -31,6 +31,18 @@
 
 - **Experiment3**: 继承与多态
   - task1: 宠物类层次结构（Pet基类，Cat和Dog子类）
+  - task2: 宠物类层次结构改进版
+  - task3: 电器设备类层次结构（ElectricalDevice基类，Fan和Light子类）
+
+- **Experiment4**: 高级面向对象特性
+  - task1: 可着色图形系统（Colorable接口，Circle类实现）
+  - task2: 学生信息管理系统（Student类实现）
+
+- **Experiment5**: 数据结构与算法
+  - task1: 数组工具类实现（ArrayUtil类，包含数组操作方法）
+
+- **Experiment6**: 综合应用
+  - task1: 最近和最远点查找系统（ClosestFarthestPoints类）
 
 ### 练习部分 (Practice)
 - **Practice1**: Java基础语法练习
@@ -82,7 +94,7 @@
 
 - Java 17或更高版本
 - 支持Java记录类(Record)特性
-- IDE推荐：IntelliJ IDEA或Eclipse
+- IDE推荐：IntelliJ IDEA
 
 ## 作者信息
 
@@ -99,8 +111,9 @@
 ## 更新日志
 
 ### 最新更新
-- 完成Practice6整数加法练习系统
+- 更新项目结构描述，添加Experiment3-6的完整内容
 - 完善项目文档和README
+- 完成Practice6整数加法练习系统
 
 ### 历史更新
 - 完成所有实验和练习任务
