@@ -2,7 +2,7 @@
 
 这是华南农业大学（SCAU）2024级软件工程专业大二的面向对象编程课程的作业仓库，Tim2354敲的（部分代码由GLM4.6协助完成，感谢智谱AI）
 
-包含了课程中的实验、练习和课程设计项目。目前处于未完成状态，但进度已有85%。
+包含了课程中的实验、练习和课程设计项目。
 
 ## 许可证
 
@@ -40,9 +40,23 @@
 
 - **Experiment5**: 数据结构与算法
   - task1: 数组工具类实现（ArrayUtil类，包含数组操作方法）
+  - task2: 数组队列实现（ArrayQueue泛型类，支持入队、出队操作）
+    - 实现技术：Java泛型（Generics）
 
 - **Experiment6**: 综合应用
   - task1: 最近和最远点查找系统（ClosestFarthestPoints类）
+
+- **Experiment7**: 文件操作与IO流
+  - task1: 文件系统信息查看器（FileSystem类）
+    - 支持显示文件详细信息（名称、类型、大小、修改时间、属性）
+    - 支持显示目录统计信息（总大小、文件数、目录数）
+    - 课程外知识点：NIO（New I/O）的[`Files`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:4)和[`Path`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:4) API、[`Files.walkFileTree()`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:56)递归遍历、[`SimpleFileVisitor`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:56)访问者模式、[`AtomicLong`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:8)线程安全计数器
+  - task2: Java关键词分析器（KeywordAnalyser类）
+    - 统计Java源文件中关键词出现次数
+    - 支持从文件读取关键词列表
+    - 将统计结果输出到文件
+    - 支持查看排名前N的关键词
+    - 课程外知识点：Stream API（[`stream()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:62)、[`filter()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:63)、[`collect()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:65)）、Lambda表达式、[`Files.readString()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:60)、[`TreeMap`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:33)自动排序、正则表达式（`\\W+`）、[`Collectors.toCollection()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:65)
 
 ### 练习部分 (Practice)
 - **Practice1**: Java基础语法练习
@@ -85,6 +99,13 @@
     - Practice类：生成具体的加法题目
     - 支持随机数生成和用户交互答题
 
+- **Practice7**: 文件操作与序列化
+  - task1: 通讯录管理系统（AddressBookManager类）
+    - 使用对象序列化将通讯录数据持久化到文件
+    - 支持添加、查询、修改、删除联系人信息
+    - 支持批量删除和交互式修改
+    - 课程外知识点：Java 14+ [`Record`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:189)类、[`ObjectInputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:26)/[`ObjectOutputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:37)序列化、[`BufferedInputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:26)/[`BufferedOutputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:37)缓冲流、Stream API（[`stream()`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:71)、[`filter()`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:72)、[`toList()`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:73)）、[`Path`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:11) API
+
 ### 课程设计 (Course Design for Data Structures)
 - **Union-Find Set**: 并查集数据结构实现，用于图的连通分量分析
 - 课程设计是给数据结构的，倒不是这门课的内容。但用Java写的，放在这里以示完整。
@@ -108,7 +129,11 @@
 ## 更新日志
 
 ### 最新更新
-- 更新了README文件的描述
+- 添加Experiment7文件操作与IO流实验内容
+- 添加Practice7通讯录管理系统
+- 完善Experiment5数据结构与算法实验描述
+- 更新项目结构描述，补充所有实验和练习内容
+- 需要注意，文件操作和综合实验部分采用了很多课程外的知识点的写法，仅供参考。因为学校教的程度不足以支撑该部分的任务实现。
 
 ### 历史更新
 - 更新项目结构描述，添加Experiment3-6的完整内容
