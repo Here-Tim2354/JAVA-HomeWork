@@ -1,8 +1,9 @@
 # SCAU Java课程作业仓库
 
-这是华南农业大学（SCAU）2024级软件工程专业大二的面向对象编程课程的作业仓库，Tim2354敲的（部分代码由GLM4.6协助完成，感谢智谱AI）
+这是华南农业大学（SCAU）2024级软件工程专业大二的面向对象编程课程的作业仓库，Tim2354敲的
+（部分代码由GLM4.6和Gemini 3 Flash协助完成，感谢智谱AI和谷歌）
 
-包含了课程中的实验、练习和课程设计项目。
+包含了课程中的实验、练习和课程设计项目。已更更新完毕。
 
 ## 许可证
 
@@ -57,6 +58,13 @@
     - 将统计结果输出到文件
     - 支持查看排名前N的关键词
     - 课程外知识点：Stream API（[`stream()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:62)、[`filter()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:63)、[`collect()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:65)）、Lambda表达式、[`Files.readString()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:60)、[`TreeMap`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:33)自动排序、正则表达式（`\\W+`）、[`Collectors.toCollection()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:65)
+
+- **Experiment8**: 综合性实验
+  - task1: 源程序文件分析工具
+    - SourceAnalyser：递归分析目录下的Java源文件，统计文件数量、总行数、空行数和字节数
+    - ResultManager：管理分析结果的存储和查看，支持使用系统默认程序打开结果文件
+    - 以树形结构展示分析结果，结果文件保存在results子目录中
+    - 课程外知识点：[`Files.list()`](JAVA_Course/Experiment/Experiment8/task1/ResultManager.java:79)流式文件遍历、[`Desktop.getDesktop().open()`](JAVA_Course/Experiment/Experiment8/task1/ResultManager.java:132)系统文件打开、Java Record类（[`AnalysisStats`](JAVA_Course/Experiment/Experiment8/task1/SourceAnalyser.java:138)）、递归目录遍历、[`BufferedWriter`](JAVA_Course/Experiment/Experiment8/task1/ResultManager.java:64)高效写入
 
 ### 练习部分 (Practice)
 - **Practice1**: Java基础语法练习
@@ -129,6 +137,7 @@
 ## 更新日志
 
 ### 最新更新
+- 添加Experiment8综合性实验内容（源程序文件分析工具）
 - 添加Experiment7文件操作与IO流实验内容
 - 添加Practice7通讯录管理系统
 - 完善Experiment5数据结构与算法实验描述
