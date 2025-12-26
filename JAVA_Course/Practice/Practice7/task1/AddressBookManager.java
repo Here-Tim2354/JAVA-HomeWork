@@ -12,6 +12,9 @@ public class AddressBookManager {
     private List<InfoLine> addressBook;
 
     public AddressBookManager() {
+        /*
+        构造函数，初始化地址簿管理器，地址簿文件已写死
+         */
         this.addressBook = new ArrayList<>();
         this.addressBookPath = Paths.get("address_book.dat");
         readAddressBook();
@@ -19,9 +22,15 @@ public class AddressBookManager {
 
     @SuppressWarnings("unchecked")
     public void readAddressBook() {
+        /*
+        读取地址簿文件内容到内存，使用序列化方式
+         */
         File file = addressBookPath.toFile();
         if (!file.exists() || file.length() == 0) {
-            this.addressBook = new ArrayList<>();
+            initNewAddressBook(file);
+            return;
+        }else{
+            System.out.println("读取地址簿文件：" + addressBookPath.toAbsolutePath());
         }
         try (ObjectInputStream ois = new ObjectInputStream(new BufferedInputStream(new FileInputStream(file)))) {
             this.addressBook = (List<InfoLine>) ois.readObject();
@@ -34,6 +43,9 @@ public class AddressBookManager {
     }
 
     public void outputAddressBookFile() {
+        /*
+        将内存中的地址簿内容写入地址簿文件，使用序列化方式
+         */
         try (ObjectOutputStream oos = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(addressBookPath.toFile())))) {
             oos.writeObject(this.addressBook);
             System.out.println("数据已输出到到文件" + addressBookPath.toAbsolutePath());
@@ -42,7 +54,36 @@ public class AddressBookManager {
         }
     }
 
+    public void initNewAddressBook(File file) {
+        /*
+        初始化一个新的地址簿，清空内存和文件内容
+         */
+        System.out.println("初始化新的地址簿文件：" + addressBookPath.toAbsolutePath());
+        try{
+            if(file.getParentFile()!=null){
+                if(file.getParentFile().mkdirs()){
+                    System.out.println("已成功创建地址簿文件所在目录："+file.getParentFile().getAbsolutePath());
+                }else{
+                    System.out.println("地址簿文件所在目录已存在："+file.getParentFile().getAbsolutePath());
+                }
+            }
+            if(file.createNewFile()){
+                System.out.println("已成功创建地址簿文件："+file.getAbsolutePath());
+            }else{
+                System.out.println("地址簿文件已存在，内容将被重置："+file.getAbsolutePath());
+            }
+            this.addressBook = new ArrayList<>();
+            System.out.println("已初始化新的地址簿文件");
+            outputAddressBookFile();
+        }catch (Exception e){
+            errPrinter(e);
+        }
+    }
+
     private void errPrinter(Exception e) {
+        /*
+        统一的错误信息打印
+         */
         System.err.println("读写文件发生错误：");
         System.err.println("错误类型：" + e.getClass());
         System.err.println("错误信息：" + e.getMessage());
@@ -50,24 +91,44 @@ public class AddressBookManager {
 
     public void printAddressBook() {
         /*
-        打印地址簿内容
+        打印地址簿内容，序号从0开始
          */
+        if(addressBook.isEmpty()){
+            System.out.println("地址簿为空，你需要添加数据。");
+            return;
+        }
+
         int count = 0;
         for (InfoLine info : addressBook) {
-            System.out.println("记录 " + (++count) + ": " + info);
+            System.out.println("记录 " + (count++) + ": " + info);
         }
     }
 
-    public void addEntry(String name, String province, String city, String postalCode, String address) {
+    public void addEntry() {
         /*
-        向地址簿添加一条记录
+        向地址簿添加一条记录，已包含用户交互
          */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("请依次输入你要添加的地址信息：");
+        System.out.println("姓名：");
+        String name = scanner.nextLine().trim();
+        System.out.println("省份：");
+        String province = scanner.nextLine().trim();
+        System.out.println("城市：");
+        String city = scanner.nextLine().trim();
+        System.out.println("邮政编码：");
+        String postalCode = scanner.nextLine().trim();
+        System.out.println("详细地址：");
+        String address = scanner.nextLine().trim();
         InfoLine infoLine = new InfoLine(name, province, city, postalCode, address);
         addressBook.add(infoLine);
         outputAddressBookFile();
     }
 
     public void checkNameAndPrint(String name) {
+        /*
+        根据姓名查询地址簿并打印结果
+         */
         List<InfoLine> results = addressBook.stream()
                 .filter(infoLine -> infoLine.name().equals(name))
                 .toList();
@@ -81,6 +142,9 @@ public class AddressBookManager {
     }
 
     public void deleteAddressByName(String name) {
+        /*
+        根据姓名删除地址簿中的记录，支持批量删除，已包含除要求输入姓名以外的用户交互
+         */
         List<InfoLine> results = addressBook.stream()
                 .filter(infoLine -> infoLine.name().equals(name))
                 .toList();
@@ -107,9 +171,13 @@ public class AddressBookManager {
                 List<InfoLine> toDelete = new ArrayList<>();
                 for (String selection : selections) {
                     if(selection.isEmpty()) continue;
-                    int choice = Integer.parseInt(selection);
-                    if (choice >= 0 && choice < results.size()) {
-                        toDelete.add(results.get(choice));
+                    try{
+                        int choice = Integer.parseInt(selection);
+                        if (choice >= 0 && choice < results.size()) {
+                            toDelete.add(results.get(choice));
+                        }
+                    }catch(NumberFormatException e){
+                        errPrinter(e);
                     }
                 }
 
@@ -121,6 +189,9 @@ public class AddressBookManager {
     }
 
     public void alterAddressByName(String name) {
+        /*
+        根据姓名修改地址簿中的记录，支持选择性修改，已包含用户交互
+         */
         List<InfoLine> results = addressBook.stream()
                 .filter(infoLine -> infoLine.name().equals(name))
                 .toList();
@@ -134,7 +205,7 @@ public class AddressBookManager {
             for (InfoLine info : results) {
                 System.out.println((index++) + " " + info);
             }
-            System.out.println("根据给出的需要，请选择你要修改的地址，直接换行可取消：");
+            System.out.println("根据给出的需要，请选择你要修改的地址的序号，直接换行可取消：");
             Scanner scanner = new Scanner(System.in);
             String choiceInput=scanner.nextLine().trim();
 
@@ -182,8 +253,13 @@ public class AddressBookManager {
             }catch (Exception e){
                 errPrinter(e);
             }
-
         }
+    }
+    public void printAbsolutePath(){
+        /*
+        打印地址簿文件的绝对路径
+         */
+        System.out.println("地址簿文件的绝对路径为："+addressBookPath.toAbsolutePath());
     }
 
     private record InfoLine(
@@ -193,6 +269,10 @@ public class AddressBookManager {
             String postalCode,
             String address
     ) implements Serializable {
+        /*
+        地址簿中的一条记录，采用record类型，自动生成构造函数和访问器
+            实现Serializable接口以支持序列化
+         */
         @Override
         public String toString() {
             return String.format("姓名：%s，省份：%s，城市：%s，邮编：%s，地址：%s",

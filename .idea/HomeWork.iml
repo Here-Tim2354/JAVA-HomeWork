@@ -18,6 +18,9 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/JAVA_Course/Title" />
       <excludeFolder url="file://$MODULE_DIR$/JAVA_Course/Experiment/Experiment7/task2/resource" />
+      <excludeFolder url="file://$MODULE_DIR$/JAVA_Course/Experiment/Experiment8/results" />
+      <excludeFolder url="file://$MODULE_DIR$/JAVA_Course/Experiment/Experiment8/rmi" />
+      <excludeFolder url="file://$MODULE_DIR$/JAVA_Course/Experiment/Experiment8/task1/rmi" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
