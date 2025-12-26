@@ -51,20 +51,20 @@
   - task1: 文件系统信息查看器（FileSystem类）
     - 支持显示文件详细信息（名称、类型、大小、修改时间、属性）
     - 支持显示目录统计信息（总大小、文件数、目录数）
-    - 课程外知识点：NIO（New I/O）的[`Files`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:4)和[`Path`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:4) API、[`Files.walkFileTree()`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:56)递归遍历、[`SimpleFileVisitor`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:56)访问者模式、[`AtomicLong`](JAVA_Course/Experiment/Experiment7/task1/FileSystem.java:8)线程安全计数器
+    - 课程外知识点：NIO（New I/O）的Files和Path API、Files.walkFileTree()递归遍历、SimpleFileVisitor访问者模式、AtomicLong线程安全计数器
   - task2: Java关键词分析器（KeywordAnalyser类）
     - 统计Java源文件中关键词出现次数
     - 支持从文件读取关键词列表
     - 将统计结果输出到文件
     - 支持查看排名前N的关键词
-    - 课程外知识点：Stream API（[`stream()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:62)、[`filter()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:63)、[`collect()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:65)）、Lambda表达式、[`Files.readString()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:60)、[`TreeMap`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:33)自动排序、正则表达式（`\\W+`）、[`Collectors.toCollection()`](JAVA_Course/Experiment/Experiment7/task2/KeywordAnalyser.java:65)
+    - 课程外知识点：Stream API（stream()、filter()、collect()）、Lambda表达式、Files.readString()、TreeMap自动排序、正则表达式（`\\W+`）、Collectors.toCollection()
 
 - **Experiment8**: 综合性实验
   - task1: 源程序文件分析工具
     - SourceAnalyser：递归分析目录下的Java源文件，统计文件数量、总行数、空行数和字节数
     - ResultManager：管理分析结果的存储和查看，支持使用系统默认程序打开结果文件
     - 以树形结构展示分析结果，结果文件保存在results子目录中
-    - 课程外知识点：[`Files.list()`](JAVA_Course/Experiment/Experiment8/task1/ResultManager.java:79)流式文件遍历、[`Desktop.getDesktop().open()`](JAVA_Course/Experiment/Experiment8/task1/ResultManager.java:132)系统文件打开、Java Record类（[`AnalysisStats`](JAVA_Course/Experiment/Experiment8/task1/SourceAnalyser.java:138)）、递归目录遍历、[`BufferedWriter`](JAVA_Course/Experiment/Experiment8/task1/ResultManager.java:64)高效写入
+    - 课程外知识点：Files.list()流式文件遍历、Desktop.getDesktop().open()系统文件打开、Java Record类（AnalysisStats）、递归目录遍历、BufferedWriter高效写入
 
 ### 练习部分 (Practice)
 - **Practice1**: Java基础语法练习
@@ -112,7 +112,7 @@
     - 使用对象序列化将通讯录数据持久化到文件
     - 支持添加、查询、修改、删除联系人信息
     - 支持批量删除和交互式修改
-    - 课程外知识点：Java 14+ [`Record`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:189)类、[`ObjectInputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:26)/[`ObjectOutputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:37)序列化、[`BufferedInputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:26)/[`BufferedOutputStream`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:37)缓冲流、Stream API（[`stream()`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:71)、[`filter()`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:72)、[`toList()`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:73)）、[`Path`](JAVA_Course/Practice/Practice7/task1/AddressBookManager.java:11) API
+    - 课程外知识点：Java 14+ Record类、ObjectInputStream/ObjectOutputStream序列化、BufferedInputStream/BufferedOutputStream缓冲流、Stream API（stream()、filter()、toList()）、Path API
 
 ### 课程设计 (Course Design for Data Structures)
 - **Union-Find Set**: 并查集数据结构实现，用于图的连通分量分析
